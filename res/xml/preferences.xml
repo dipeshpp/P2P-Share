@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Preferences" >
+        <EditTextPreference
+            android:name="Username Preference"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textAutoComplete"
+            android:key="usernamePref"
+            android:summary="Select a username"
+            android:title="Username" />
+        <EditTextPreference
+            android:name="Username Preference"
+            android:defaultValue="/Download"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textAutoComplete|"
+            android:key="downloadDirectory"
+            android:summary="Set location of received files"
+            android:title="Downloads Directory" />
+
+        <Preference
+            android:summary="Manage shared Directories"
+            android:title="Shared Directories" >
+            <intent
+                android:targetClass="com.project.Shared"
+                android:targetPackage="com.project" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications" >
+        <RingtonePreference
+            android:name="Ringtone Preference"
+            android:key="ringtonePref"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="Set notification ringtone"
+            android:title="Ringtone" />
+
+        <CheckBoxPreference
+            android:name="Vibrate Preference"
+            android:defaultValue="true"
+            android:key="vibratePref"
+            android:summary="Vibrate when notifications arrive"
+            android:title="Vibrate" />
+        <CheckBoxPreference
+            android:name="LED Preference"
+            android:defaultValue="true"
+            android:key="ledPref"
+            android:summary="Blink when notifications arrive"
+            android:title="LED" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About" >
+        <Preference
+            android:key="reportBugs"
+            android:summary="Send feedback to developer"
+            android:title="Report Bugs" />
+        <Preference
+            android:key="about"
+            android:summary="About this application"
+            android:title="About" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
